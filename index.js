@@ -1,8 +1,15 @@
-function view() {
-    return <ul id="filmList" className="list">
-      <li className="main">Detective Chinatown Vol 2</li>
-      <li>Ferdinand</li>
-      <li>Paddington 2</li>
+
+const CREATE = 'CREATE'   //新增一个节点
+const REMOVE = 'REMOVE'   //删除原节点
+const REPLACE = 'REPLACE'  //替换原节点
+const UPDATE = 'UPDATE'    //检查属性或子节点是否有变化
+const SET_PROP = 'SET_PROP'  //新增或替换属性
+const REMOVE_PROP = 'REMOVE PROP'  //删除属性
+
+function view(count) {
+    const r = [...Array(count).keys()];
+    return <ul id="filmList" className={`list-${count%3}`}>
+        {r.map(n => <li>item {(count * n).toString()}</li>)}
     </ul>
   }
 
@@ -44,9 +51,20 @@ function setProps(target, props){
     })
 }
 
-
-function render(el) {
-  el.appendChild(createElement(view()))
+function tick(el,count){
+  const patches = diff(view(count+1),view(count));
+  patche(el,patches);
+  if(count > 5) return;
+  setTimeout(() => tick(el,count+1),1000);
 }
 
-  
+
+
+function render(el) {
+  const initialCount = 0;
+  el.appendChild(createElement(view(initialCount)))
+  setTimeout(()=>{
+     tick(el,count+1);
+  },1000)
+}
+
