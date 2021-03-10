@@ -5,12 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "babel index.js --out-file compiled.js"
+    "compile": "babel index.js --out-file compiled.js",
+    "dev": "webpack-dev-server"
   },
   "author": "xiongben",
   "license": "ISC",
+  "dependencies": {
+    "snabbdom": "^2.1.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.23.0",
-    "babel-plugin-transform-react-jsx": "^6.23.0"
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
   }
 }
