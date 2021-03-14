@@ -6,4 +6,5 @@ const myVnode1 = h('h1',{}, 'hello xiongben');
 
 const container = document.getElementById('app');
 
+
 patch(container, myVnode1);
