@@ -13,6 +13,10 @@ export default function (oldVode, newVnode){
     }else{
         console.log("different node,insert new dom,delete old dom");
         console.log(oldVode, newVnode)
-        createElement(newVnode, oldVode.elm);
+        let newVnodeDomElm = createElement(newVnode);
+        if(oldVode.elm.parentNode && newVnodeDomElm){
+            oldVode.elm.parentNode.insertBefore(newVnodeDomElm, oldVode.elm);
+        }
+
     }
 }

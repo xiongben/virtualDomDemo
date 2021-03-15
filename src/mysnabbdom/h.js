@@ -16,7 +16,7 @@ export default function (sel, data, c){
     }else if(Array.isArray(c)){
         let children = [];
         for(let i = 0; i < c.length; i++){
-            if(!(typeof c[i] != 'object' && c[i].hasOwnProperty('sel'))){
+            if(!(typeof c[i] == 'object' && c[i].hasOwnProperty('sel'))){
                 throw new Error("数组中有参数不符合h函数参数条件");
             }
             children.push(c[i]);
