@@ -21,10 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="509f1ed0-dd01-4bb5-bbcf-98010af878fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysnabbdom/createElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysnabbdom/createElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysnabbdom/h.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysnabbdom/h.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mysnabbdom/patch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysnabbdom/patch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,5 +123,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.0.1920.1080@0.0.1440.900" timestamp="1615715526110" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1615975966702">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/1440.-46.1920.1080/-1920.-74.1920.1080@0.0.1440.900" timestamp="1615975966702" />
   </component>
 </project>
