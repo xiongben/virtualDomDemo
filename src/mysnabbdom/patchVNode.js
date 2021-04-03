@@ -8,6 +8,7 @@ export default function patchVnode(newVnode, oldVode){
         console.log("new vnode has text attr");
         if(newVnode.text != oldVode.text){
             //新的节点的text和旧的节点的text不同
+
             oldVode.elm.innerText = newVnode.text;
         }
     }else{

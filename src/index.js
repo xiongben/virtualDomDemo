@@ -20,10 +20,9 @@ const container = document.getElementById('app');
 patch(container, myVnode1);
 
 const myVnode2 = h('ul',{}, [
-    h('li',{key: 'A'},"A"),
+    h('li',{key: 'C'},"c"),
     h('li',{key: 'B'},"B"),
-    h('li',{key: 'D'},"D"),
-    h('li',{key: 'C'},"C"),
+    h('li',{key: 'A'},"A"),
 ]);
 
 
