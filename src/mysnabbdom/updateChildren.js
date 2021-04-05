@@ -7,6 +7,11 @@ function checkSameVnode(a, b) {
 }
 
 
+
+//核心方法
+
+
+
 export default function updateChildren(parentElm, oldCh, newCh){
     console.log(oldCh, newCh);
     //旧前
@@ -22,9 +27,18 @@ export default function updateChildren(parentElm, oldCh, newCh){
     let oldEndVnode = oldCh[oldEndIdx];
     let newStartVnode = newCh[0];
     let newEndVnode = newCh[newEndIdx];
+    let keyMap = {};
 
     while (oldStartIdx  <= oldEndIdx && newStartIdx <= newEndIdx){
-        if(checkSameVnode(oldStartVnode,newStartVnode)){
+        if(oldStartVnode == null || oldCh[oldStartIdx] == undefined){
+            oldStartVnode = oldCh[++oldStartIdx];
+        } else if (oldEndVnode == null || oldCh[oldEndIdx] == undefined) {
+            oldEndVnode = oldCh[--oldEndIdx];
+        } else if (newStartVnode == null || newCh[newStartIdx] == undefined) {
+            newStartVnode = newCh[++newStartIdx];
+        } else if (newEndVnode == null || newCh[newEndIdx] == undefined) {
+            newEndVnode = newCh[--newEndIdx];
+        } else if(checkSameVnode(oldStartVnode,newStartVnode)){
             //新前与旧前
             console.log("1,新前与旧前")
             patchVNode(newStartVnode, oldStartVnode);
@@ -50,6 +64,46 @@ export default function updateChildren(parentElm, oldCh, newCh){
             parentElm.insertBefore(oldEndVnode.elm, oldStartVnode.elm);
             oldEndVnode = oldCh[--oldEndIdx];
             newStartVnode = newCh[++newStartIdx];
+        } else {
+            console.log("5,都没有命中")
+            if(!keyMap) {
+                keyMap = {};
+                for(let i = oldStartIdx; i <= oldEndIdx; i++ ){
+                    const key = oldCh[i].key;
+                    if(key != undefined) {
+                        keyMap[key] = i;
+                    }
+                }
+            }
+            //寻找当前newStartIdx这项在keymap中的映射的位置序号
+            const idxInOld = keyMap[newStartVnode.key];
+            if(idxInOld == undefined){
+               parentElm.insertBefore(createElement(newStartVnode), oldStartVnode.elm);
+            } else {
+                //不是新的节点，需要移动
+               const elmToMove = oldCh[idxInOld];
+               patchVNode(newStartVnode, elmToMove);
+               oldCh[idxInOld] = undefined;
+               parentElm.insertBefore(elmToMove.elm, oldStartVnode.elm);
+            }
+
+            newStartVnode = newCh[++newStartIdx];
+        }
+    }
+
+    //检查有没有循环过剩的
+    if(newStartIdx <= newEndIdx) {
+        console.log("新节点还有剩余节点没有处理");
+
+        for(let i = newStartIdx; i <= newEndIdx; i++){
+            parentElm.insertBefore( createElement(newCh[i]),oldCh[oldStartIdx])
+        }
+    } else if (oldStartIdx <= oldEndIdx){
+        console.log("旧节点还有剩余节点没有处理")
+        for(let i = oldStartIdx; i <= oldEndIdx; i++){
+            if(oldCh[i]){
+                parentElm.removeChild(oldCh[i].elm);
+            }
         }
     }
 }

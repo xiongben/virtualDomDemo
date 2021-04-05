@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="509f1ed0-dd01-4bb5-bbcf-98010af878fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_3_15_10_27__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_3_15_上午10_27_[Default_Changelist]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysnabbdom/patchVNode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysnabbdom/patchVNode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mysnabbdom/updateChildren.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysnabbdom/updateChildren.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,24 +75,12 @@
       <scripts>
         <script value="dev" />
       </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v12.1.0/bin/node" />
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v12.10.0/bin/node" />
       <envs />
       <method v="2" />
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -109,7 +94,11 @@
       <workItem from="1606126629250" duration="768000" />
       <workItem from="1615369569197" duration="1108000" />
       <workItem from="1615707257532" duration="4201000" />
-      <workItem from="1616051914611" duration="308000" />
+      <workItem from="1616051914611" duration="610000" />
+      <workItem from="1616233209892" duration="508000" />
+      <workItem from="1616294531771" duration="129000" />
+      <workItem from="1617096631791" duration="599000" />
+      <workItem from="1617163182808" duration="4453000" />
     </task>
     <servers />
   </component>
@@ -121,19 +110,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615707534417">
+    <state x="184" y="112" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617603715380">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/-1920.0.1920.1080@0.0.1440.900" timestamp="1615707534417" />
+    <state x="184" y="112" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/1440.-46.1920.1080/-1920.-74.1920.1080@0.0.1440.900" timestamp="1617603715380" />
     <state width="1419" height="189" key="GridCell.Tab.0.bottom" timestamp="1617420961378">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

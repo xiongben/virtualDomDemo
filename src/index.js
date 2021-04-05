@@ -23,6 +23,7 @@ const myVnode2 = h('ul',{}, [
     h('li',{key: 'C'},"c"),
     h('li',{key: 'B'},"B"),
     h('li',{key: 'A'},"A"),
+    h('li',{key: 'D'},"D"),
 ]);
 
 
